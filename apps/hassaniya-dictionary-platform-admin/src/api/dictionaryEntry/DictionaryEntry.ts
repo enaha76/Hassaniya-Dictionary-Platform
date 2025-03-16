@@ -1,0 +1,35 @@
+import { Activity } from "../activity/Activity";
+import { AiSuggestion } from "../aiSuggestion/AiSuggestion";
+import { User } from "../user/User";
+import { Comment } from "../comment/Comment";
+import { Definition } from "../definition/Definition";
+import { Example } from "../example/Example";
+import { ExtractedWord } from "../extractedWord/ExtractedWord";
+import { Root } from "../root/Root";
+import { Submission } from "../submission/Submission";
+
+export type DictionaryEntry = {
+  activities?: Array<Activity>;
+  aiSuggestions?: Array<AiSuggestion>;
+  approvalDate: Date | null;
+  approvalUser?: User | null;
+  audioFilePath: string | null;
+  comments?: Array<Comment>;
+  createdAt: Date;
+  creator?: User | null;
+  definitions?: Array<Definition>;
+  examples?: Array<Example>;
+  extractedWords?: Array<ExtractedWord>;
+  id: number;
+  isChallengeWord: boolean;
+  lastEditor?: User | null;
+  originType: string | null;
+  partOfSpeech: string | null;
+  root?: Root | null;
+  status: string;
+  submissions?: Array<Submission>;
+  transliteration: string | null;
+  updatedAt: Date;
+  verbForm: string | null;
+  word: string;
+};

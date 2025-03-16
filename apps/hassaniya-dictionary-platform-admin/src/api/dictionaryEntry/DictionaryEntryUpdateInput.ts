@@ -1,0 +1,32 @@
+import { ActivityUpdateManyWithoutDictionaryEntriesInput } from "./ActivityUpdateManyWithoutDictionaryEntriesInput";
+import { AiSuggestionUpdateManyWithoutDictionaryEntriesInput } from "./AiSuggestionUpdateManyWithoutDictionaryEntriesInput";
+import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
+import { CommentUpdateManyWithoutDictionaryEntriesInput } from "./CommentUpdateManyWithoutDictionaryEntriesInput";
+import { DefinitionUpdateManyWithoutDictionaryEntriesInput } from "./DefinitionUpdateManyWithoutDictionaryEntriesInput";
+import { ExampleUpdateManyWithoutDictionaryEntriesInput } from "./ExampleUpdateManyWithoutDictionaryEntriesInput";
+import { ExtractedWordUpdateManyWithoutDictionaryEntriesInput } from "./ExtractedWordUpdateManyWithoutDictionaryEntriesInput";
+import { RootWhereUniqueInput } from "../root/RootWhereUniqueInput";
+import { SubmissionUpdateManyWithoutDictionaryEntriesInput } from "./SubmissionUpdateManyWithoutDictionaryEntriesInput";
+
+export type DictionaryEntryUpdateInput = {
+  activities?: ActivityUpdateManyWithoutDictionaryEntriesInput;
+  aiSuggestions?: AiSuggestionUpdateManyWithoutDictionaryEntriesInput;
+  approvalDate?: Date | null;
+  approvalUser?: UserWhereUniqueInput | null;
+  audioFilePath?: string | null;
+  comments?: CommentUpdateManyWithoutDictionaryEntriesInput;
+  creator?: UserWhereUniqueInput | null;
+  definitions?: DefinitionUpdateManyWithoutDictionaryEntriesInput;
+  examples?: ExampleUpdateManyWithoutDictionaryEntriesInput;
+  extractedWords?: ExtractedWordUpdateManyWithoutDictionaryEntriesInput;
+  isChallengeWord?: boolean;
+  lastEditor?: UserWhereUniqueInput | null;
+  originType?: string | null;
+  partOfSpeech?: string | null;
+  root?: RootWhereUniqueInput | null;
+  status?: string;
+  submissions?: SubmissionUpdateManyWithoutDictionaryEntriesInput;
+  transliteration?: string | null;
+  verbForm?: string | null;
+  word?: string;
+};
